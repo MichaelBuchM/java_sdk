@@ -24,7 +24,7 @@ public interface AriaBillingIntegration {
     *   total_records - Type: javax.xml.ws.Holder<br>
     *   account_details - Type: ArrayList&#60;AccountDetailsReturnElement&#62;<br>
     */
-    abstract Map<String,Object> getAccountDetails(Long client_no, String auth_key, String query_string, Long limit, Long offset);
+    //abstract Map<String,Object> getAccountDetails(Long client_no, String auth_key, String query_string, Long limit, Long offset);
 
     abstract Map<String,Object> getAccountDetails(Map<String,Object> map);
 
