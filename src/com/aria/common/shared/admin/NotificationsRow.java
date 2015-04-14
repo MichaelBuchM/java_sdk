@@ -16,7 +16,7 @@ public class NotificationsRow {
     @XmlElement(name = "units")
     protected Long units;
     @XmlElement(name = "values")
-    protected  values;
+    protected  Long values;
     public Long getUnits() {
         return units;
     }
@@ -25,11 +25,11 @@ public class NotificationsRow {
         this.units = value;
     }
 
-    public  getValues() {
+    public Long getValues() {
         return values;
     }
 
-    public void setValues( value) {
+    public void setValues(Long value) {
         this.values = value;
     }
 
