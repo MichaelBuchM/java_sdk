@@ -58,7 +58,7 @@ public class AriaServiceClientTest {
     @Test
     /* Please, UnComment the method call on which you wnat to do the test */
     public void fullTest() throws Exception{
-        //getClientPlansAll();
+        getClientPlansAll();
         //setProvEngine();
         //getAufStatus();
         //getCountryFromIp();
@@ -3276,6 +3276,7 @@ public class AriaServiceClientTest {
     //@Test
     public void cancelUnconsumedCredit() throws Exception {
         
+
         hashMapReturnValues = getBaseAriaBilling().cancelUnconsumedCredit(getClientNo(), getAuthKey()        , 1L
                 , ""
         );
@@ -4597,6 +4598,7 @@ public class AriaServiceClientTest {
             assertEquals(errorMessage, 0L, hashMapReturnValues.get(ERROR_CODE));
         }
     }
+
 
     //@Test
     public void getRefundDetails() throws Exception {
