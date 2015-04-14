@@ -27,7 +27,9 @@ dependencies {
     compile files ('./download/third-party/json_simple-1.1.jar')
     compile files ('./download/third-party/junit.jar')
     compile files ('./download/third-party/wsdl4j-1.6.2.jar')
-    
+
+    testCompile "junit:junit:4.11"
+
 
 }
 // end::dependencies[]
@@ -38,6 +40,8 @@ task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }
 // end::wrapper[]
+
+
 
 
 
