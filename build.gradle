@@ -34,12 +34,52 @@ dependencies {
 }
 // end::dependencies[]
 
+configurations {
+
+    unitTestCompile.extendsFrom runtime
+
+    unitTestRuntime.extendsFrom unitTestCompile
+
+}
 
 // tag::wrapper[]
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }
 // end::wrapper[]
+
+
+sourceSets {
+
+    unitTest {
+
+        java.srcDir file('src/com/aria/sdk/unitTest/AriaServiceClientTest.java')
+
+        //resources.srcDir file('src/test/resources')
+
+    }
+
+}
+
+// add the unitTest task
+
+task unitTest(type:Test, dependsOn: assemble) {
+
+    description = "run unit tests"
+
+    testClassesDir = project.sourceSets.unitTest.output.classesDir
+
+    classpath = project.sourceSets.unitTest.runtimeClasspath
+
+}
+
+ 
+
+// bind to check
+
+check.dependsOn unitTest
+
+
 
 
 
